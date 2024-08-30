@@ -1,7 +1,17 @@
-import { Inter } from "next/font/google";
+import { Inter, Sniglet } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+const sniglet = Sniglet({
+  subsets: ["latin"],
+  weight: "800",
+  display: "swap",
+  variable: "--font-sniglet",
+});
 
 export const metadata = {
   title: "Meow?",
@@ -10,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${sniglet.variable} font-sans`}>
+      <body>{children}</body>
     </html>
   );
 }
