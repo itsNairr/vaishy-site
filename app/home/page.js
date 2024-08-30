@@ -163,7 +163,13 @@ function page() {
           <div className="cloud" data-aos="zoom-in-down" data-aos-delay="2000">
             <p className="cloud-text">Pookie's Coupons</p>
           </div>
+          <div className="cloud" data-aos="zoom-in-down" data-aos-delay="2000">
+            <p className="cloud-text">Pookie's Anniversary Message</p>
+          </div>
         </div>
+        <span className="text-[30px] mt-10 text-center sm:text-[25px] xs:text-[20px]">
+          Pick a cloud, any cloud meow.
+        </span>
       </div>
     </>
   );
