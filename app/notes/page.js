@@ -26,7 +26,7 @@ function Page() {
           className="text-[75px] text-center font-bold sm:text-[50px] xs:text-[40px]"
           data-aos="zoom-in"
         >
-          Vaishy's Notes
+          Vaishy&apos;s Notes
         </span>
         <span className="text-[30px] mt-8 text-center sm:text-[25px] xs:text-[20px]">
           For whenever she feels a specific way

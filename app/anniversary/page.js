@@ -23,12 +23,12 @@ function Page() {
           className="text-[75px] text-center font-bold sm:text-[50px] xs:text-[40px]"
           data-aos="zoom-in"
         >
-          Vaishy's Message
+          Vaishy&apos;s Message
         </span>
         <div className="text-[30px] mt-8 mb-8 sm:text-[25px] xs:text-[20px] flex flex-col items-center text-;eft">
           <span data-aos="fade-right">
           Dear Vaishy, <br/>
-          If you are reading this, that means that a) you managed to navigate this site (you're very technologically challenged) and
+          If you are reading this, that means that a) you managed to navigate this site (you&apos;re very technologically challenged) and
           b) we have officially been together for 2 whole years... YAYYYYYYYYYY!! I so happy. I really hope you like this website I made you, I know its a litte
           different but I really hope you like it meow.
           </span>
@@ -43,7 +43,7 @@ function Page() {
           <img src='./10.jpg' alt="Pookie" className="h-[400px] xs:h-[250px] w-auto rounded-md" />
           <br/> <br/>
           <span data-aos="fade-right">
-          As time went on I loved you more and more to the point there will never be a day where I don't stop loving you hehe. I hope you have the
+          As time went on I loved you more and more to the point there will never be a day where I don&apos;t stop loving you hehe. I hope you have the
           best days ahead of you and I hope to see your beautiful smile every single day for the rest of my life. It may be only two years now, but 
           soon enough, we will be meowried for eternity (best day ever)
           </span>
@@ -51,8 +51,8 @@ function Page() {
           <img src='./16.jpg' alt="Pookie" className="h-[400px] xs:h-[250px] w-auto rounded-md" />
           <br/> <br/>
           <span data-aos="fade-right">
-          Happy Anniversary my love, thank you for everything you have done for me. I really don't know where I would be without you at this point (maybe dead somewhere who knows).
-          I love you more than the definition of love. You are my everything, my world, my stinky pookie. heheh. I can't wait to marry you.
+          Happy Anniversary my love, thank you for everything you have done for me. I really don&apos;t know where I would be without you at this point (maybe dead somewhere who knows).
+          I love you more than the definition of love. You are my everything, my world, my stinky pookie. heheh. I can&apos;t wait to marry you.
           </span>
           <br/> <br/>
           <span data-aos="fade-right">

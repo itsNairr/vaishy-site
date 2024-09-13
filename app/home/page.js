@@ -112,43 +112,43 @@ function Page() {
         <div id="container">
           <div className="scroll">
             <div className="item">Meow</div>
-            <div className="item">You're so pretty</div>
+            <div className="item">You&apos;re so pretty</div>
             <div className="item">I love you</div>
             <div className="item">Mommy</div>
             <div className="item">I love you</div>
             <div className="item">Meow</div>
-            <div className="item">You're so pretty</div>
+            <div className="item">You&apos;re so pretty</div>
             <div className="item">Meowry me</div>
-            <div className="item">You're stinky</div>
+            <div className="item">You&apos;re stinky</div>
             <div className="item">Meow</div>
             <div className="item">Meow</div>
-            <div className="item">You're so pretty</div>
+            <div className="item">You&apos;re so pretty</div>
             <div className="item">I love you</div>
             <div className="item">Mommy</div>
             <div className="item">I love you</div>
             <div className="item">Meow</div>
-            <div className="item">You're so pretty</div>
+            <div className="item">You&apos;re so pretty</div>
             <div className="item">Meowry me</div>
-            <div className="item">You're stinky</div>
+            <div className="item">You&apos;re stinky</div>
             <div className="item">Meow</div>
             <div className="item">Meow</div>
 
             
             <div className="item">Meow</div> 
 
-            <div className="item">You're so pretty</div>
+            <div className="item">You&apos;re so pretty</div>
             <div className="item">I love you</div>
             <div className="item">Mommy</div>
             <div className="item">I love you</div>
             <div className="item">Meow</div>
-            <div className="item">You're so pretty</div>
+            <div className="item">You&apos;re so pretty</div>
             <div className="item">Meowry me</div>
-            <div className="item">You're stinky</div>
+            <div className="item">You&apos;re so stinky</div>
             <div className="item">Meow</div>
-            <div className="item">You're stinky</div>
+            <div className="item">You&apos;re stinky</div>
             <div className="item">Meow</div>
             <div className="item">Meow</div>
-            <div className="item">You're so pretty</div>
+            <div className="item">You&apos;re so pretty</div>
           </div>
           <div className="fade"></div>
         </div>
@@ -176,10 +176,10 @@ function Page() {
         </span>
         <div className="mt-20 mb-10 flex flex-row flex-wrap justify-center gap-20">
           <Link href='/gallery' className="cloud" data-aos="zoom-in-down">
-            <p className="cloud-text">Pookie's Gallery</p>
+            <p className="cloud-text">Pookie&apos;s Gallery</p>
           </Link>
           <Link href='/notes'  className="cloud" data-aos="zoom-in-down" data-aos-delay="500">
-            <p className="cloud-text">Pookie's Notes</p>
+            <p className="cloud-text">Pookie&apos;s Notes</p>
           </Link>
           <Link href='/map' className="cloud" data-aos="zoom-in-down" data-aos-delay="1000">
             <p className="cloud-text">Pookie Maps</p>
@@ -187,8 +187,8 @@ function Page() {
           {/* <div className="cloud" data-aos="zoom-in-down" data-aos-delay="2000">
             <p className="cloud-text">Pookie's Coupons</p>
           </div> */}
-          <Link href='/anniversary' className="cloud" data-aos="zoom-in-down" data-aos-delay="2000">
-            <p className="cloud-text">Pookie's Anniversary Message</p>
+          <Link href='/anniversary' className="cloud " data-aos="zoom-in-down" data-aos-delay="2000">
+            <p className="cloud-text">Pookie&apos;s Anniversary Message</p>
           </Link>
         </div>
         <span className="text-[30px] mt-10 mb-5 text-center sm:text-[25px] xs:text-[20px]">
