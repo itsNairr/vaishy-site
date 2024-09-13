@@ -31,11 +31,11 @@ function Page() {
         </span>
         <div className="flex flex-row flex-wrap gap-10 items-center justify-center my-5">
           {imageFiles.map((imageFile, index) => (
-            <BlurFade key={index} className="h-[300px] xs:h-[200px]" delay={1 + index * 0.05} inView>
+            <BlurFade key={index} delay={1 + index * 0.05} inView>
               <img
                 src={`./${imageFile}.jpg`}
                 alt={`Image ${index + 1}`}
-                className="h-full w-full rounded-md"
+                className="h-[300px] xs:h-[200px] w-auto rounded-md"
               />
             </BlurFade>
           ))}
