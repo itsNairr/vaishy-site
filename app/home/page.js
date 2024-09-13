@@ -153,7 +153,7 @@ function Page() {
           <div className="fade"></div>
         </div>
         <div
-          className="mt-5 xs:absolute xs:bottom-[5%] xs:mt-0 "
+          className="mt-5"
           onClick={handleScroll}
         >
           <Lottie

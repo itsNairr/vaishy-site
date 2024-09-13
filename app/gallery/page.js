@@ -29,9 +29,9 @@ function Page() {
         >
           Gallery of Vaishy and Hari
         </span>
-        <div className="flex flex-row w-full flex-wrap gap-10 items-center justify-center my-5">
+        <div className="flex flex-row flex-wrap gap-10 items-center justify-center my-5">
           {imageFiles.map((imageFile, index) => (
-            <BlurFade key={index} className="h-[300px] xs:h-[200px] w-auto" delay={1 + index * 0.05} inView>
+            <BlurFade key={index} className="h-[300px] xs:h-[200px]" delay={1 + index * 0.05} inView>
               <img
                 src={`./${imageFile}.jpg`}
                 alt={`Image ${index + 1}`}
