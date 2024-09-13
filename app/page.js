@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from 'next/link';
 
-function page() {
+function Page() {
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -34,4 +34,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
