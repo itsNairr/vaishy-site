@@ -4,10 +4,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import animation from "../../lotties/downarrow.json";
 import Lottie from "react-lottie";
+import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration"; // To handle durations easily
 import "./home.css";
 import Link from "next/link";
 
-function page() {
+dayjs.extend(duration);
+
+function Page() {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
@@ -19,18 +23,52 @@ function page() {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date("09/13/2022");
-    const now = new Date();
+    const targetDate = dayjs("2022-09-13");
 
     // Update the count every second
     const interval = setInterval(() => {
-      const updatedTimeRemaining = new Date().getTime() - targetDate.getTime();
+      const now = dayjs();
+      const updatedTimeRemaining = now.diff(targetDate); // Get the difference in milliseconds
       setCount(updatedTimeRemaining);
     }, 1000);
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(interval);
   }, []);
+
+  const calculateTime = (milliseconds) => {
+    if (!milliseconds) {
+      return { years: 0, months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 }; // Default values when count is null
+    }
+
+    const now = dayjs();
+    const targetDate = dayjs("2022-09-13");
+
+    const years = now.diff(targetDate, "year");
+    const months = now.diff(targetDate.add(years, "years"), "month");
+    const days = now.diff(targetDate.add(years, "years").add(months, "months"), "day");
+    const hours = now.diff(
+      targetDate.add(years, "years").add(months, "months").add(days, "days"),
+      "hour"
+    );
+    const minutes = now.diff(
+      targetDate.add(years, "years").add(months, "months").add(days, "days").add(hours, "hours"),
+      "minute"
+    );
+    const seconds = now.diff(
+      targetDate
+        .add(years, "years")
+        .add(months, "months")
+        .add(days, "days")
+        .add(hours, "hours")
+        .add(minutes, "minutes"),
+      "second"
+    );
+
+    return { years, months, days, hours, minutes, seconds };
+  };
+
+  const { years, months, days, hours, minutes, seconds } = calculateTime(count);
 
   const defaultOptions = {
     loop: true,
@@ -40,17 +78,6 @@ function page() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-
-  const years = Math.floor(count / (1000 * 60 * 60 * 24 * 365));
-  const months = Math.floor(
-    (count % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
-  );
-  const days = Math.floor(
-    (count % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
-  );
-  const hours = Math.floor((count % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((count % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((count % (1000 * 60)) / 1000);
 
   const handleScroll = () => {
     const element = document.getElementById("navscreen");
@@ -66,11 +93,11 @@ function page() {
         >
           Welcome Vaishy!
         </span>
-        <span className="text-[30px] mt-10 text-center sm:text-[25px] xs:text-[20px]">
+        <span className="text-[25px] mt-8 text-center sm:text-[25px] xs:text-[20px]">
           <span>Did you know?</span> As of right now we have been meowried for
         </span>
         <span
-          className="text-[30px] mt-5 mb-10 xs:mb-5 text-center sm:text-[25px] xs:text-[20px] bg-pink-300 p-5 rounded-full"
+          className="text-[25px] mt-5 mb-8 xs:mb-5 text-center sm:text-[25px] xs:text-[20px] bg-pink-300 p-5 rounded-full"
           data-aos="flip-up"
           data-aos-delay="2000"
         >
@@ -80,7 +107,7 @@ function page() {
         <img
           src="./pookiemain.jpg"
           alt="Me and Pookie"
-          className="heart w-[400px] h-[400px] xs:w-[250px] xs:h-[250px]"
+          className="heart w-[350px] h-[350px] xs:w-[250px] xs:h-[250px]"
         />
         <div id="container">
           <div className="scroll">
@@ -106,8 +133,8 @@ function page() {
             <div className="item">Meow</div>
             <div className="item">Meow</div>
 
-            {/* EASTER EGG */}
-            <div className="item">Hehe</div> 
+            
+            <div className="item">Meow</div> 
 
             <div className="item">You're so pretty</div>
             <div className="item">I love you</div>
@@ -151,28 +178,25 @@ function page() {
           <Link href='/gallery' className="cloud" data-aos="zoom-in-down">
             <p className="cloud-text">Pookie's Gallery</p>
           </Link>
-          <div className="cloud" data-aos="zoom-in-down" data-aos-delay="500">
+          <Link href='/notes'  className="cloud" data-aos="zoom-in-down" data-aos-delay="500">
             <p className="cloud-text">Pookie's Notes</p>
-          </div>
+          </Link>
           <Link href='/map' className="cloud" data-aos="zoom-in-down" data-aos-delay="1000">
             <p className="cloud-text">Pookie Maps</p>
           </Link>
-          <div className="cloud" data-aos="zoom-in-down" data-aos-delay="1500">
-            <p className="cloud-text">Epic Future Plan</p>
-          </div>
-          <div className="cloud" data-aos="zoom-in-down" data-aos-delay="2000">
+          {/* <div className="cloud" data-aos="zoom-in-down" data-aos-delay="2000">
             <p className="cloud-text">Pookie's Coupons</p>
-          </div>
-          <div className="cloud" data-aos="zoom-in-down" data-aos-delay="2000">
+          </div> */}
+          <Link href='/anniversary' className="cloud" data-aos="zoom-in-down" data-aos-delay="2000">
             <p className="cloud-text">Pookie's Anniversary Message</p>
-          </div>
+          </Link>
         </div>
-        <span className="text-[30px] mt-10 text-center sm:text-[25px] xs:text-[20px]">
-          Pick a cloud, any cloud meow.
+        <span className="text-[30px] mt-10 mb-5 text-center sm:text-[25px] xs:text-[20px]">
+          Pick a cloud, any cloud <Link href='/dasecretegg'>hehe</Link>.
         </span>
       </div>
     </>
   );
 }
 
-export default page;
+export default Page;

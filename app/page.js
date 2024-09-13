@@ -14,7 +14,7 @@ function page() {
   } , []);
 
   const handleChange = (e) => {
-    if (e.target.value === "1") {
+    if (e.target.value === "Meow I love you i want attention") {
       document.getElementById('enter_button').classList.remove('hidden');
     }
     else {
@@ -28,7 +28,7 @@ function page() {
       <span className="text-[45px] mt-20 text-center sm:text-[35px] xs:text-[25px]">But first... What's the password?</span>
       <input type="text" className="bg-pink-200 border-2 text-[25px] text-black border-white rounded-md p-2 mt-10 focus:bg-white" onChange={handleChange} />
       <span className='text-[25px] mt-10' data-aos="zoom-out" data-aos-delay="1000">Heres a Hint.. </span>
-      <span className='text-[25px]' data-aos="zoom-out" data-aos-delay="2000">PLACEHOLDER</span>
+      <span className='text-[25px]' data-aos="zoom-out" data-aos-delay="2000">Apr 3, Line 1</span>
       <Link id="enter_button" href='/home' className="bg-white border-2 border-white rounded-md p-2 mt-10 hidden text-[25px] text-pink-200">Enter Meow</Link>
     </div>
   );

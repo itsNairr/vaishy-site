@@ -31,7 +31,7 @@ function Page() {
         </span>
         <Mapbox />
         <span className="text-[30px] mt-8 mb-8 text-center sm:text-[25px] xs:text-[20px]">
-          Now when Pookie is decisive, she can just look at the map and see
+          Now when Pookie is indecisive, she can just look at the map and see
           where she wants to go
         </span>
       </div>
